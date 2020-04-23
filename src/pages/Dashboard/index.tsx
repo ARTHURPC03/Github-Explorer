@@ -6,17 +6,18 @@ import logoImg from '../../assets/logo.svg'
 
 import { Title, Form, Repositories } from './styles'
 
-interface Repository {
+interface Repository          {
   full_name: string
-  description: string
+                description: string
   owner: {
     login: string
-    avatar_url: string
-  }
+                          avatar_url: string;
+  } 
 }
 
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('')
+  const [inputError, setInputError] = useState('')
   const [repositories, setRepositories] = useState<Repository[]>([])
 
   async function handleAddRepository(
@@ -24,12 +25,22 @@ const Dashboard: React.FC = () => {
   ): Promise<void> {
     event.preventDefault()
 
-    const response = await api.get<Repository>(`repos/${newRepo}`)
+    if(!newRepo) {
+
+      setInputError('Digite o autor/nome do repositório')
+    }
+
+try {
+  const response = await api.get<Repository>(`repos/${newRepo}`)
 
     const repository = response.data
 
     setRepositories([...repositories, repository])
     setNewRepo('')
+} catch (err) {
+  setInputError('Erro na busca por esse repositório')
+}
+
   }
 
   return (
