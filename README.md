@@ -13,11 +13,9 @@
 
 ## :camera: Demonstração
 
-![gif](github/Rocketshoes.gif)
-![png1](github/1.PNG)
-![png2](github/2.PNG)
-![png3](github/3.PNG)
-![png4](github/4.PNG)
+![gif](github/githubexplorer.gif)
+![png1](github/Dashboard.PNG)
+![png2](github/Repository.PNG)
 
 ## :rocket: Tecnologias
 
