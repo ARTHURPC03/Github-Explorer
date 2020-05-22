@@ -40,7 +40,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Github explorar é uma aplicação feita utilizando React + typescript, que consome a API do Github, para adicionar repositórios, ver alguns dados como Issues,forks,stars.
+Github explorer é uma aplicação feita utilizando React + typescript, que consome a API do Github, para adicionar repositórios, ver alguns dados como Issues,forks,stars.
 
 ## ⚙ Configuração
 
